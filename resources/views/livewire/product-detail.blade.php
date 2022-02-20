@@ -64,6 +64,273 @@
 
 <br>
 
+
+        
+        <style>
+            .color-grid{
+                display:grid;
+                 grid-template-columns: repeat(5,1fr);
+                 gap:10px;
+            }
+        </style>
+
+        <div class="color-grid" id="myTable">
+            
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                       Color Name
+                   </h5>
+                </center>
+                
+                 <center>
+                    
+                    <input type="text" class="txtCal">
+                    
+                </center>
+                
+            </div>
+            
+             <div class="color">
+                
+                <center>
+                    
+                    <img src="https://www.feltandyarn.com/img/co/825.jpg">
+                    
+                </center>
+                
+                 <center>
+                    
+                   <h5>
+                      Color Name
+                   </h5>
+                    
+                </center>
+                
+                 <center>
+                    
+                   
+                    <input type="text" class="txtCal">
+                </center>
+                
+            </div>
+            
+            
+        </div>
+        <br>
+        
+        <script>
+            $(document).ready(function(){
+            
+            	
+            $("#myTable").on('input', '.txtCal', function () {
+                   var calculated_total_sum = 0;
+                 
+                   $("#myTable .txtCal").each(function () {
+                       var get_textbox_value = $(this).val();
+                       if ($.isNumeric(get_textbox_value)) {
+                          calculated_total_sum += parseFloat(get_textbox_value);
+                          }                  
+                        });
+                          $("#total_sum_value").html(calculated_total_sum);
+                   });
+            
+            });
+
+</script>
+        <div>
+            <h3> total Quantity:</h3>
+            <h3 id="total_sum_value">
+                0
+            </h3>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
         <div class="product-details-action">
             <div class="details-action-col">
                 <div class="product-details-quantity">
