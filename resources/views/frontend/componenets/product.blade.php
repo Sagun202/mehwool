@@ -5,7 +5,7 @@
     <figure class="product-media">
      
        <a href="{{ route('product.detail',$product->slug) }}">
-       <img src="{{ asset('public/storage/'.$product->thumbnail) }}" alt="{{ $product->title }}" class="product-image">
+       <img src="{{ asset('storage/'.$product->thumbnail) }}" alt="{{ $product->title }}" class="product-image">
        </a>
        
        

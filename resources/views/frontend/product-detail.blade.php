@@ -57,7 +57,7 @@
                         <div class="product-gallery product-gallery-vertical">
                             <div class="row">
                                 <figure class="product-main-image">
-                                    <img id="main" class="magnifiedImg"  src="{{ asset('public/storage/'.$product->thumbnail) }}" data-zoom-image="{{ asset('public/storage/'.$product->thumbnail) }}" alt="{{ $product->title }}">
+                                    <img id="main" class="magnifiedImg"  src="{{ asset('storage/'.$product->thumbnail) }}" data-zoom-image="{{ asset('storage/'.$product->thumbnail) }}" alt="{{ $product->title }}">
 
                                
                                 </figure><!-- End .product-main-image -->
@@ -67,9 +67,9 @@
                                     
                                 <div>
                                     @foreach ($product->images as $image)
-                                    <img onclick="document.getElementById('main').src='{{ asset('public/storage/'.$image) }}'"   src="{{ asset('public/storage/'.$image) }}" alt="product side">
+                                    <img onclick="document.getElementById('main').src='{{ asset('public/storage/'.$image) }}'"   src="{{ asset('storage/'.$image) }}" alt="product side">
                                     @endforeach
-                                    <img onclick="document.getElementById('main').src='{{ asset('public/storage/'.$product->thumbnail) }}'"    src="{{ asset('public/storage/'.$product->thumbnail) }}" alt="product side">
+                                    <img onclick="document.getElementById('main').src='{{ asset('public/storage/'.$product->thumbnail) }}'"    src="{{ asset('storage/'.$product->thumbnail) }}" alt="product side">
                                 </div>
                           
                                 
