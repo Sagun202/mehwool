@@ -1,22 +1,22 @@
 
 
-<script src="{{asset('public/frontend/assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/jquery.hoverIntent.min.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/jquery.waypoints.min.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/superfish.min.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/jquery.hoverIntent.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/superfish.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!-- Main JS File -->
-    <script src="{{asset('public/frontend/assets/js/main.js')}}"></script>
-    <script src="{{asset('public/frontend/assets/js/demos/demo-21.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/demos/demo-21.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 @stack('js')
 <script>
 
 <!-- countdown js -->
 
-<script type="text/javascript" src="{{ asset('public/frontend') }}/js/countdown.js"></script>
+<script type="text/javascript" src="{{ asset('frontend') }}/js/countdown.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>

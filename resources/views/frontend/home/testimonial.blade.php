@@ -35,7 +35,7 @@
                         <div class="content">
                           <p>{!! $testimonial->message !!}</p>
                           <div class="image">
-                            <img src="{{ asset('public/storage/'.$testimonial->image) }}" alt="{{$testimonial->introduction}}">
+                            <img src="{{ asset('storage/'.$testimonial->image) }}" alt="{{$testimonial->introduction}}">
                           </div>
                           <div class="details">
                             <h2>

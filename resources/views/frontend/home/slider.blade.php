@@ -5,7 +5,7 @@
         @foreach ($sliders as $slider)
         <div class="owl-item " style="width: 128.906px; margin-right: 10px;">
             <div class="item">
-               <img src="{{ asset('public/storage/'.$slider->image) }}" alt="">
+               <img src="{{ asset('storage/'.$slider->image) }}" alt="">
             </div>
          </div>
         @endforeach 

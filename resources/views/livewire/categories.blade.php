@@ -5,7 +5,7 @@
         <li>
             <a href="{{ route('category',$category->slug) }}">
                 <div class="index-categories-cards">
-                    <img style="background:#ffc0cb; border-radius:100%;" src="{{ asset('public/storage/'.$category->image) }}" alt="{{ $category->name }}" onerror="this.src='{{ asset('dummy.png') }}'" />
+                    <img style="background:#ffc0cb; border-radius:100%;" src="{{ asset('storage/'.$category->image) }}" alt="{{ $category->name }}" onerror="this.src='{{ asset('dummy.png') }}'" />
                     <p>{{ $category->name }}</p>
                 </div>
             </a>

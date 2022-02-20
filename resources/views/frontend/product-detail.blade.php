@@ -67,9 +67,9 @@
                                     
                                 <div>
                                     @foreach ($product->images as $image)
-                                    <img onclick="document.getElementById('main').src='{{ asset('public/storage/'.$image) }}'"   src="{{ asset('storage/'.$image) }}" alt="product side">
+                                    <img onclick="document.getElementById('main').src='{{ asset('storage/'.$image) }}'"   src="{{ asset('storage/'.$image) }}" alt="product side">
                                     @endforeach
-                                    <img onclick="document.getElementById('main').src='{{ asset('public/storage/'.$product->thumbnail) }}'"    src="{{ asset('storage/'.$product->thumbnail) }}" alt="product side">
+                                    <img onclick="document.getElementById('main').src='{{ asset('storage/'.$product->thumbnail) }}'"    src="{{ asset('storage/'.$product->thumbnail) }}" alt="product side">
                                 </div>
                           
                                 

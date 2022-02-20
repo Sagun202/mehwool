@@ -19,7 +19,7 @@
                 <div class="about-images">
                   
                  
-                    <img src="{{ asset('public/storage/'.$site->logo) }}" alt="" class="about-img-front">
+                    <img src="{{ asset('storage/'.$site->logo) }}" alt="" class="about-img-front">
                     <img src="https://www.thecreativefolk.com/wp-content/uploads/2021/03/Acrylic-Vs-Wool-%E2%80%93-Whats-The-Difference.jpg" alt="" class="about-img-back">
                 </div><!-- End .about-images -->
             </div><!-- End .col-lg-6 -->
@@ -45,7 +45,7 @@
                     <div class="card shadow-sm border-0">
                         <div class="card-body">
                             <div class="user-picture">
-                                <img src="{{asset('public/storage/'.$team1->image)}}" class="shadow-sm rounded-circle" height="130" width="130" />
+                                <img src="{{asset('storage/'.$team1->image)}}" class="shadow-sm rounded-circle" height="130" width="130" />
                             </div>
                             <div class="user-content">
                                 <h5 class="text-capitalize user-name">{{($team1->name)}}</h5>
@@ -106,7 +106,7 @@
                     <div class="card shadow-sm border-0">
                         <div class="card-body">
                             <div class="user-picture">
-                                <img src="{{asset('public/storage/'.$team1->image)}}" class="shadow-sm rounded-circle" height="130" width="130" />
+                                <img src="{{asset('storage/'.$team1->image)}}" class="shadow-sm rounded-circle" height="130" width="130" />
                             </div>
                             <div class="user-content">
                                 <h5 class="text-capitalize user-name">{{($team1->name)}}</h5>

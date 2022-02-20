@@ -4,7 +4,7 @@
 
 <div class="padd">
     <figure class="entry-media">
-        <img style="width: 100%; height:500px" src="{{ asset('public/storage/'.$blog_details->image) }}" alt="image desc">
+        <img style="width: 100%; height:500px" src="{{ asset('storage/'.$blog_details->image) }}" alt="image desc">
     </figure><!-- End .entry-media -->
     <div class="container" style="background: white">
         <article class="entry single-entry entry-fullwidth">

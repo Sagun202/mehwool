@@ -34,7 +34,7 @@
       @if($count<5)
       <a href="{{ route('category',$category->slug) }}">
         <div class="col" style="background: white; border-radius: 5px;">
-          <img src="{{ asset('public/storage/'.$category->image) }}" style="width: 100%; padding:20px" alt="">
+          <img src="{{ asset('storage/'.$category->image) }}" style="width: 100%; padding:20px" alt="">
           <center>
              <strong class="cate-nam">
               {{  Illuminate\Support\Str::limit($category->name, 15) }}
