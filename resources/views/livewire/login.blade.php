@@ -45,7 +45,7 @@
                            
                                 <a href="#signin-modal" data-toggle="modal" class="wishlist-link">
                                   <i class='fas fa-user-circle'></i>
-                                  <span class="wishlist-txt">login / join</span>
+                                  <span class="wishlist-txt">Sign in </span>
                                 </a>
                                
 @endauth

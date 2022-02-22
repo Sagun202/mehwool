@@ -22,11 +22,13 @@ class CartItem extends Model
         'attribute_ids',
         'variations',
         'variation_id',
+        'variation_quantity'
     ];
 
     protected $casts = [
         'attribute_ids' => 'array',
         'variations' => 'array',
+        'variation_quantity' => 'array'
     ];
 
     public function cart()

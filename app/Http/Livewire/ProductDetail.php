@@ -22,6 +22,8 @@ class ProductDetail extends Component
     public $title;
     public $images;
     public $price;
+    public $attribute;
+    public $variation_quantity;
     public function mount()
     {
         $this->has_variation = $this->product->has_variation;
@@ -136,9 +138,13 @@ class ProductDetail extends Component
 
     public function addToCart()
     {
+        
+
+     
+        
         $cart = FrontEndHandler::getCart();
-        if ($this->has_variation) {
-            if (count($this->selected) <= 0) {
+        if ($this->variation_quantity) {
+            if (count($this->variation_quantity) <= 0) {
 
                 $this->alert('info', 'Please select attributes before adding to cart!!');
                 return false;
@@ -154,8 +160,9 @@ class ProductDetail extends Component
                     'product_id' => $this->product->id,
                     'quantity' => $this->quantity,
                     'attribute_ids' => $this->attributes->pluck('id')->toArray(),
-                    'variations' => $this->selected,
-                    'variation_id' => $this->selectedVari->id,
+                    'variations' => $this->attribute,
+                   'variation_id' => $this->attribute,
+                    'variation_quantity' => $this->variation_quantity,
                 ]);
                 $this->alert('success', 'Successfully Added To Cart!', [
                     'position' => 'top-end',
@@ -194,14 +201,6 @@ class ProductDetail extends Component
             if (count($this->selected) <= 0) {
                 $this->alert('info', 'Please select attributes first');
                 return false;
-            } else {
-                if ($this->quantity < $this->selectedVari->quantity) {
-                    $this->quantity++;
-                    return false;
-                } else {
-                    $this->alert('info', 'Max availiable is ' . $this->selectedVari->quantity);
-                    return false;
-                }
             }
         }
         if ($this->product->quantity > $this->quantity) {

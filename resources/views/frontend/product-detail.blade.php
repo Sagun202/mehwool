@@ -3,10 +3,10 @@
 <link rel="stylesheet" href="{{ asset('frontend') }}/css/flexslider.css" />
 <style>
     .selected {
-     
+
         font-weight: 900;
         color: red !important
-        
+
 
     }
 
@@ -28,7 +28,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
         <div class="container d-flex align-items-center">
             <ol class="breadcrumb">
-               
+
                     <li class="home">
                         <a title="Go to Home Page" href="{{ route('index') }}">Home</a><span>&raquo;</span>
                     </li>
@@ -41,10 +41,10 @@
                     &nbsp;&nbsp;&nbsp;
                     @endif
                     <li><strong>{{ $product->title }}</strong></li>
-                
+
             </ol>
 
-         
+
         </div><!-- End .container -->
     </nav><!-- End .breadcrumb-nav -->
     <br>
@@ -59,20 +59,20 @@
                                 <figure class="product-main-image">
                                     <img id="main" class="magnifiedImg"  src="{{ asset('storage/'.$product->thumbnail) }}" data-zoom-image="{{ asset('storage/'.$product->thumbnail) }}" alt="{{ $product->title }}">
 
-                               
+
                                 </figure><!-- End .product-main-image -->
 
                                 <div id="product-zoom-gallery" class="product-image-gallery">
 
-                                    
+
                                 <div>
                                     @foreach ($product->images as $image)
                                     <img onclick="document.getElementById('main').src='{{ asset('storage/'.$image) }}'"   src="{{ asset('storage/'.$image) }}" alt="product side">
                                     @endforeach
                                     <img onclick="document.getElementById('main').src='{{ asset('storage/'.$product->thumbnail) }}'"    src="{{ asset('storage/'.$product->thumbnail) }}" alt="product side">
                                 </div>
-                          
-                                
+
+
                                 </div><!-- End .product-image-gallery -->
                             </div><!-- End .row -->
                         </div><!-- End .product-gallery -->
@@ -86,7 +86,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" id="product-desc-link" data-toggle="tab" href="#product-desc-tab" role="tab" aria-controls="product-desc-tab" aria-selected="true">Description</a>
                     </li>
-                  
+
                     <li class="nav-item">
                         <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">( {{ count($product->reviews) }} Reviews )</a>
                     </li>
@@ -97,17 +97,17 @@
                             {!!$product->description!!}
                         </div><!-- End .product-desc-content -->
                     </div><!-- .End .tab-pane -->
-                  
-                    
-                       
+
+
+
                         @livewire('review',['product'=>$product])
-                       
+
                        <!-- End .reviews -->
                    <!-- .End .tab-pane -->
                 </div><!-- End .tab-content -->
             </div><!-- End .product-details-tab -->
 
-          
+
         </div><!-- End .container -->
     </div><!-- End .page-content -->
 </main>
@@ -120,11 +120,11 @@
 
 <div class="container">
     <!-- Breadcrumbs -->
-  
+
     <!-- Breadcrumbs End -->
-  
-          
-   
+
+
+
 <style>
     #tow { display: none; }
 </style>
@@ -140,7 +140,7 @@
 document.getElementById("tow2").addEventListener("click", myFunction);
 
 function myFunction() {
-    
+
       div1 = document.getElementById('help1');
     div1.style.display = "none";
 
@@ -148,11 +148,11 @@ function myFunction() {
 </script>
 
 
-                                    
-                                    
+
+
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ function myFunction() {
 
 
 
-    
+
 
     <div class="super-deal " >
         <div class="product-block" style="background-color: white; padding: 10px; border-radius: 5px;" >
@@ -173,35 +173,35 @@ function myFunction() {
                 Related<span style="color: red;">&nbsp;Products</span>
                  </strong>
               </h3>
-           
+
            </div>
            <br>
            <div class="owl-carousel relate owl-theme owl-loaded owl-drag">
               <div class="owl-stage-outer">
                  <div class="owl-stage" style="transform: translate3d(-1527px, 0px, 0px); transition: all 0.25s ease 0s; width: 3334px;">
-                  @foreach ($related as $relate)  
+                  @foreach ($related as $relate)
                   <div class="owl-item " style="width: 128.906px; margin-right: 10px;">
-                      
+
                        <div class="item">
                         {{ FrontEndHandler::getProductCard($relate) }}
                        </div>
-                     
+
                     </div>
                     @endforeach
-                
+
                  </div>
               </div>
            </div>
         </div>
      </div>
      <br>
-  
 
-  
+
+
   <script>
     var owl = $('.relate');
     owl.owlCarousel({
-     
+
         loop:true,
           dots: false,
         margin:10,
@@ -222,14 +222,14 @@ function myFunction() {
             }
         }
     });
-    
-    
-        
+
+
+
   </script>
 
 
 
-    
+
 </div>
 
 <script>

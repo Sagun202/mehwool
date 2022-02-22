@@ -26,18 +26,18 @@
                             @foreach ($items as $item)
 
                             @livewire('cart-item',['item'=>$item],key($item->id))
-                      
+
                             @endforeach
                         </tbody>
                     </table><!-- End .table table-wishlist -->
 
-        
+
                 </div><!-- End .col-lg-9 -->
                 <aside class="col-lg-3">
                     <div class="summary summary-cart">
                         <h3 class="summary-title">Cart summary</h3><!-- End .summary-title -->
 
-                        
+
                         <table class="table">
                             <thead>
                               <tr>
@@ -55,28 +55,28 @@
                                 @php($product = $item->product)
                                 @if($product)
 
-                                
+
                               <tr>
                                 <th scope="row">{{ ($item->quantity) }}</th>
-                                <td>{{ $product->title }}</td>
-                                <td>
+                                <td  class="price-col2">{{ $product->title }}</td>
+                                <td  class="price-col2">
                                         @if ($product->has_variation)
-                                            @php($price = $item->variation->price)
+                                            @php($price = $item->product->price)
                                             Rs. {{ $price  }}
                                         @else
                                             Rs. {{ $product->price-$product->discount }}
-                                
+
                                         @endif
                                 </td>
-                                <td>   @if ($product->has_variation)
-                                    @php($price = $item->variation->price)
+                                <td  class="price-col2">   @if ($product->has_variation)
+                                    @php($price = $item->product->price)
                                     @php($sub =  ($price - $product->discount) * $item->quantity  )
                                     Rs. {{$sub}}
                                 @else
                                 @php($sub =  $product->discounted_price * $item->quantity  )
                                 Rs. {{$sub}}
-                                 
-                        
+
+
                                 @endif</td>
                               </tr>
                               @php($total=$total + $sub )
@@ -84,10 +84,11 @@
                               @endforeach
                             </tbody>
                           </table>
-                    <tr class="cart-checkout-total-row">
-                        <th> Grand Total</th>
-                        
-                        <td>Rs. {{ $total }}</td>
+                    <tr>
+                        <th  class="price-col2"><h6>Grand Total
+                            </h6> </th>
+
+                        <td  class="price-col2"><h6>Rs. {{ $total }}</h6></td>
                     </tr>
                 </table>
 
@@ -98,7 +99,7 @@
                 @else
                 <a class="btn btn-outline-primary-2 btn-order btn-block"  data-toggle="modal"  data-target="#signin-modal"> Login<i class="fas fa-arrow-right"></i></a>
                 @endif
-                        
+
                     </div><!-- End .summary -->
 
                     <a href="{{ route('index') }}" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span><i class="icon-refresh"></i></a>
@@ -111,4 +112,9 @@
     </div><!-- End .cart -->
 </div>
 
+<style>
+    .price-col2{
+        font-size: 14px;
+    }
+</style>
 <br>

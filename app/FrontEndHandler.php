@@ -61,7 +61,7 @@ class FrontEndHandler
         $products = Product::where('status', 1)->with('categories')->where('top', 1)->get();
         return view('frontend.home.top-product', compact('products'));
     }
-    
+
       public function recentProducts()
     {
         $products = Product::where('status', 1)->with('categories')->where('featured', 1)->get();
@@ -84,31 +84,31 @@ class FrontEndHandler
             return view('frontend.home.ads', compact('ads'));
         } elseif ($position == 2 && $ads) {
             return view('frontend.home.ads2', compact('ads'));
-        } 
+        }
      elseif ($position == 3 && $ads) {
             return view('frontend.home.ads3', compact('ads'));
-        } 
+        }
          elseif ($position == 4 && $ads) {
             return view('frontend.home.ads4', compact('ads'));
-        } 
+        }
          elseif ($position == 5 && $ads) {
             return view('frontend.home.ads5', compact('ads'));
-        } 
+        }
          elseif ($position == 6 && $ads) {
             return view('frontend.home.ads6', compact('ads'));
-        } 
+        }
          elseif ($position == 7 && $ads) {
             return view('frontend.home.ads7', compact('ads'));
-        } 
+        }
          elseif ($position == 8 && $ads) {
             return view('frontend.home.ads8', compact('ads'));
-        } 
+        }
          elseif ($position == 9 && $ads) {
             return view('frontend.home.ads9', compact('ads'));
-        } 
+        }
          elseif ($position == 10 && $ads) {
             return view('frontend.home.ads10', compact('ads'));
-        } 
+        }
         else {
             return '';
         }
@@ -122,6 +122,7 @@ class FrontEndHandler
 
     public function getCart()
     {
+
         if (auth()->check()) {
             $cart = Cart::where('user_id', auth()->id())->first();
             if (!$cart) {
@@ -202,7 +203,7 @@ class FrontEndHandler
         $testimonials = Testimonial::all(); {
             return view('frontend.home.testimonial', compact('testimonials'));
         }
-      
+
 
     }
 
@@ -211,7 +212,7 @@ class FrontEndHandler
         $blogs = Post::all(); {
             return view('frontend.home.blog', compact('blogs'));
         }
-      
+
 
     }
 
